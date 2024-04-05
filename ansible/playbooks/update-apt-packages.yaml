@@ -1,7 +1,9 @@
 ---
 - hosts: all
 
-  become: false
+  become: true
+  become_method: sudo
+  become_user: root
   tasks:
     - name: update apt packages
       apt:
